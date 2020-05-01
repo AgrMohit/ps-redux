@@ -28,7 +28,7 @@
 | react-dom        | React library for DOM rendering                      |
 | react-redux      | Connects React components to Redux                   |
 | react-router-dom | React library for routing                            |
-| react-toastify   | Display messages to the user                         |
+| react-toastify   | Display messages to the user                         | 
 | redux            | Library for unidirectional data flows                |
 | redux-thunk      | Async redux library                                  |
 | reselect         | Memoize selectors for performance                    |
@@ -37,7 +37,7 @@
 
 | **Dependency**                  | **Use**                                                          |
 | ------------------------------- | ---------------------------------------------------------------- |
-| @babel/core                     | Transpiles modern JavaScript so it runs cross-browser            |
+| @babel/core                     | Transpiles modern JavaScript so it could run cross-browser            |
 | babel-eslint                    | Lint modern JavaScript via ESLint                                |
 | babel-loader                    | Add Babel support to Webpack                                     |
 | babel-preset-react-app          | Babel preset for working in React. Used by create-react-app too. |
