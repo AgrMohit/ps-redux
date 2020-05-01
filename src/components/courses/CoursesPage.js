@@ -13,7 +13,7 @@ function CoursesPage(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.actions.createCourse(course);
+    props.createCourse(course);
   }
 
   return (
@@ -37,15 +37,13 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(courseActions, dispatch),
-  };
-}
+const mapDispatchToProps = {
+  createCourse: courseActions.createCourse,
+};
 
 CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired,
+  courseActions: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
