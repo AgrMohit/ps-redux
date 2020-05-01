@@ -12,7 +12,7 @@ function CoursesPage(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.dispatch(courseActions.createCourse(course));
+    props.createCourse(course);
   }
 
   return (
@@ -36,9 +36,15 @@ function mapStateToProps(state) {
   };
 }
 
+function mapDispatchToProps(dispatch) {
+  return {
+    createCourse: (course) => dispatch(courseActions.createCourse(course)),
+  };
+}
+
 CoursesPage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   courses: PropTypes.array.isRequired,
+  createCourse: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(CoursesPage);
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
