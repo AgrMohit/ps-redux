@@ -8,6 +8,13 @@ const HomePage = () => (
     <Link to="about" className="btn btn-primary btn-lg">
       Learn more
     </Link>
+    <Link
+      to="an-invalid-page"
+      className="btn btn-danger btn-lg"
+      style={{ margin: "1%" }}
+    >
+      404 Page
+    </Link>
   </div>
 );
 
